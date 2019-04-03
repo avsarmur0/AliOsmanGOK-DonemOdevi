@@ -178,6 +178,7 @@
             this.txtUrunAdi.Name = "txtUrunAdi";
             this.txtUrunAdi.Size = new System.Drawing.Size(184, 28);
             this.txtUrunAdi.TabIndex = 0;
+            this.txtUrunAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAdi_KeyPress);
             // 
             // xlblUrunRengi
             // 
@@ -208,7 +209,7 @@
             this.xgbMobilyaListesi.Controls.Add(this.xlblKriter);
             this.xgbMobilyaListesi.Controls.Add(this.btnAra);
             this.xgbMobilyaListesi.Controls.Add(this.dgvUrunListesi);
-            this.xgbMobilyaListesi.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xgbMobilyaListesi.Font = new System.Drawing.Font("Open Sans", 11F);
             this.xgbMobilyaListesi.Location = new System.Drawing.Point(12, 263);
             this.xgbMobilyaListesi.Name = "xgbMobilyaListesi";
             this.xgbMobilyaListesi.Size = new System.Drawing.Size(760, 286);
@@ -220,7 +221,7 @@
             // 
             this.txtAranacakKelime.Location = new System.Drawing.Point(501, 23);
             this.txtAranacakKelime.Name = "txtAranacakKelime";
-            this.txtAranacakKelime.Size = new System.Drawing.Size(154, 33);
+            this.txtAranacakKelime.Size = new System.Drawing.Size(154, 27);
             this.txtAranacakKelime.TabIndex = 3;
             this.txtAranacakKelime.TextChanged += new System.EventHandler(this.txtAranacakKelime_TextChanged);
             // 
@@ -228,7 +229,7 @@
             // 
             this.rbUrunKategori.AutoSize = true;
             this.rbUrunKategori.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbUrunKategori.Location = new System.Drawing.Point(284, 40);
+            this.rbUrunKategori.Location = new System.Drawing.Point(284, 39);
             this.rbUrunKategori.Name = "rbUrunKategori";
             this.rbUrunKategori.Size = new System.Drawing.Size(118, 22);
             this.rbUrunKategori.TabIndex = 2;
@@ -240,7 +241,7 @@
             this.rbUrunAdi.AutoSize = true;
             this.rbUrunAdi.Checked = true;
             this.rbUrunAdi.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbUrunAdi.Location = new System.Drawing.Point(284, 17);
+            this.rbUrunAdi.Location = new System.Drawing.Point(284, 16);
             this.rbUrunAdi.Name = "rbUrunAdi";
             this.rbUrunAdi.Size = new System.Drawing.Size(78, 22);
             this.rbUrunAdi.TabIndex = 1;
@@ -251,24 +252,24 @@
             // xlblKelime
             // 
             this.xlblKelime.AutoSize = true;
-            this.xlblKelime.Location = new System.Drawing.Point(411, 26);
+            this.xlblKelime.Location = new System.Drawing.Point(431, 26);
             this.xlblKelime.Name = "xlblKelime";
-            this.xlblKelime.Size = new System.Drawing.Size(84, 26);
+            this.xlblKelime.Size = new System.Drawing.Size(64, 20);
             this.xlblKelime.TabIndex = 3;
             this.xlblKelime.Text = "Kelime :";
             // 
             // xlblKriter
             // 
             this.xlblKriter.AutoSize = true;
-            this.xlblKriter.Location = new System.Drawing.Point(205, 26);
+            this.xlblKriter.Location = new System.Drawing.Point(222, 26);
             this.xlblKriter.Name = "xlblKriter";
-            this.xlblKriter.Size = new System.Drawing.Size(73, 26);
+            this.xlblKriter.Size = new System.Drawing.Size(55, 20);
             this.xlblKriter.TabIndex = 3;
             this.xlblKriter.Text = "Kriter :";
             // 
             // btnAra
             // 
-            this.btnAra.Location = new System.Drawing.Point(661, 23);
+            this.btnAra.Location = new System.Drawing.Point(661, 20);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(93, 33);
             this.btnAra.TabIndex = 4;
@@ -285,7 +286,7 @@
             this.dgvUrunListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans", 11F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -302,7 +303,7 @@
             this.dgvUrunListesi.ContextMenuStrip = this.cmsMobilya;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

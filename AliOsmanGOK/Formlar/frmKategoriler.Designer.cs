@@ -37,12 +37,11 @@
             this.xlblUrunAdi = new System.Windows.Forms.Label();
             this.xgbKategoriler = new System.Windows.Forms.GroupBox();
             this.dgvKategoriListesi = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kategoriAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kategoriAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmsKategori = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiKategoriDuzenle = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiKategoriSil = new System.Windows.Forms.ToolStripMenuItem();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategoriAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xgbKategoriBolumu.SuspendLayout();
             this.xgbKategoriler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategoriListesi)).BeginInit();
@@ -96,7 +95,7 @@
             // xgbKategoriler
             // 
             this.xgbKategoriler.Controls.Add(this.dgvKategoriListesi);
-            this.xgbKategoriler.Font = new System.Drawing.Font("Open Sans", 14.25F);
+            this.xgbKategoriler.Font = new System.Drawing.Font("Open Sans", 11F);
             this.xgbKategoriler.Location = new System.Drawing.Point(12, 162);
             this.xgbKategoriler.Name = "xgbKategoriler";
             this.xgbKategoriler.Size = new System.Drawing.Size(360, 165);
@@ -122,8 +121,7 @@
             this.dgvKategoriListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKategoriListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.kategoriAdi,
-            this.kategoriAciklama});
+            this.kategoriAdi});
             this.dgvKategoriListesi.ContextMenuStrip = this.cmsKategori;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -146,30 +144,6 @@
             this.dgvKategoriListesi.Size = new System.Drawing.Size(348, 127);
             this.dgvKategoriListesi.TabIndex = 1;
             this.dgvKategoriListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKategoriListesi_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 40;
-            // 
-            // kategoriAdi
-            // 
-            this.kategoriAdi.DataPropertyName = "kategoriAdi";
-            this.kategoriAdi.HeaderText = "Kategori Adı";
-            this.kategoriAdi.Name = "kategoriAdi";
-            this.kategoriAdi.ReadOnly = true;
-            this.kategoriAdi.Width = 170;
-            // 
-            // kategoriAciklama
-            // 
-            this.kategoriAciklama.DataPropertyName = "kategoriAciklama";
-            this.kategoriAciklama.HeaderText = "Açıklama";
-            this.kategoriAciklama.Name = "kategoriAciklama";
-            this.kategoriAciklama.ReadOnly = true;
-            this.kategoriAciklama.Width = 135;
             // 
             // cmsKategori
             // 
@@ -195,6 +169,22 @@
             this.tsmiKategoriSil.Size = new System.Drawing.Size(198, 26);
             this.tsmiKategoriSil.Text = "Kategori Sil";
             this.tsmiKategoriSil.Click += new System.EventHandler(this.tsmiKategoriSil_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 40;
+            // 
+            // kategoriAdi
+            // 
+            this.kategoriAdi.DataPropertyName = "kategoriAdi";
+            this.kategoriAdi.HeaderText = "Kategori Adı";
+            this.kategoriAdi.Name = "kategoriAdi";
+            this.kategoriAdi.ReadOnly = true;
+            this.kategoriAdi.Width = 287;
             // 
             // frmKategoriler
             // 
@@ -225,14 +215,13 @@
         private System.Windows.Forms.GroupBox xgbKategoriBolumu;
         private System.Windows.Forms.GroupBox xgbKategoriler;
         private System.Windows.Forms.DataGridView dgvKategoriListesi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriAciklama;
         private System.Windows.Forms.Button btnKategoriKaydet;
         private System.Windows.Forms.TextBox txtKategoriAdi;
         private System.Windows.Forms.Label xlblUrunAdi;
         private System.Windows.Forms.ContextMenuStrip cmsKategori;
         private System.Windows.Forms.ToolStripMenuItem tsmiKategoriDuzenle;
         private System.Windows.Forms.ToolStripMenuItem tsmiKategoriSil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriAdi;
     }
 }

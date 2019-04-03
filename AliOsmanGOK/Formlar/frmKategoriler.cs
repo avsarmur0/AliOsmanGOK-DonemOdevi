@@ -30,9 +30,9 @@ namespace AliOsmanGOK.Formlar
         {
             if (dgvKategoriListesi.SelectedRows.Count > 0)
             {
-                kID = int.Parse(dgvKategoriListesi.SelectedRows[0].Cells[1].Value.ToString());
+                kID = int.Parse(dgvKategoriListesi.SelectedRows[0].Cells[0].Value.ToString());
                 duzenle = 1;
-                txtKategoriAdi.Text = dgvKategoriListesi.SelectedRows[0].Cells[2].Value.ToString();
+                txtKategoriAdi.Text = dgvKategoriListesi.SelectedRows[0].Cells[1].Value.ToString();
             }
         }
 
@@ -43,7 +43,7 @@ namespace AliOsmanGOK.Formlar
                 if (MessageBox.Show("Kategoriyi silmek istediğinize emin misiniz?", "Ürün Siliniyor!", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                 {
                     baglantiAc();
-                    SQLiteCommand kategoriSil = new SQLiteCommand("DELETE FROM kategoriler WHERE id=" + int.Parse(dgvKategoriListesi.SelectedRows[0].Cells[1].Value.ToString()), baglanti);
+                    SQLiteCommand kategoriSil = new SQLiteCommand("DELETE FROM kategoriler WHERE id=" + int.Parse(dgvKategoriListesi.SelectedRows[0].Cells[0].Value.ToString()), baglanti);
                     if (kategoriSil.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Silme başarılı.");

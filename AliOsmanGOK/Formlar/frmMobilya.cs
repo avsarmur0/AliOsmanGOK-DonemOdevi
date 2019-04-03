@@ -59,6 +59,10 @@ namespace AliOsmanGOK.Formlar
                     {
                         cmbUrunKategorisi.Items.Add("0" + kategoriOku["id"].ToString() + " | " + kategoriOku["kategoriAdi"].ToString());
                     }
+                    else
+                    {
+                        cmbUrunKategorisi.Items.Add(kategoriOku["id"].ToString() + " | " + kategoriOku["kategoriAdi"].ToString());
+                    }
                 }
             }
             baglanti.Close();
@@ -75,6 +79,10 @@ namespace AliOsmanGOK.Formlar
                     if (renkOku["id"].ToString().Length == 1)
                     {
                         cmbUrunRengi.Items.Add("0" + renkOku["id"].ToString() + " | " + renkOku["renkAdi"].ToString());
+                    }
+                    else
+                    {
+                        cmbUrunRengi.Items.Add(renkOku["id"].ToString() + " | " + renkOku["renkAdi"].ToString());
                     }
                 }
             }
@@ -181,6 +189,11 @@ namespace AliOsmanGOK.Formlar
             {
                 urunListesiniCek();
             }
+        }
+
+        private void txtUrunAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void tsmiUrunuDuzenle_Click(object sender, EventArgs e)
